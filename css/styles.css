@@ -2,32 +2,34 @@
 body {
   margin: 0;
   text-align: center;
-  font-family: 'Merriweather', serif;
-  color: #40514E;
   font-family: 'Merriweather', 'Montserrat', sans-serif;
+  color: #40514E;
 }
 
 h1 {
-  font-size: 5.625rem; /* 90px */
-  margin: 50px auto 0 auto;
+  font-size: 2.5rem; /* Reduce size for mobile */
+  margin: 10px 0;
   font-family: 'Sacramento', cursive;
   color: #66BFBF;
-  margin: 10px 0;
+  word-wrap: break-word; /* Prevent text overflow */
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
   color: #66BFBF;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   padding-bottom: 10px;
   margin: 10px 0;
+  word-wrap: break-word; /* Prevent text overflow */
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
   color: #11999E;
+  font-size: 1.5rem;
   margin: 10px 0;
+  word-wrap: break-word; /* Prevent text overflow */
 }
 
 a {
@@ -44,6 +46,8 @@ a:hover {
 
 ul {
   text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
 ul ul {
@@ -51,10 +55,10 @@ ul ul {
 }
 
 hr {
-    border: dotted silver 6px;
-    border-bottom: none;
-    width: 4%;
-    margin: 75px auto;
+  border: dotted silver 6px;
+  border-bottom: none;
+  width: 20%;
+  margin: 20px auto; /* Reduce vertical spacing */
 }
 
 img {
@@ -66,26 +70,29 @@ img {
 .top-container {
   background-color: #E4F9F5;
   position: relative;
-  padding-top: 100px;
   padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .middle-container {
-  margin: 100px 0;
+  margin: 50px 0; /* Reduce vertical spacing */
   padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .highlights {
-  width: 50%;
-  margin: 0 auto 50 auto;
+  width: 100%; /* Full width on mobile */
+  margin: 0 auto;
   line-height: 1.5;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .highlights-list {
-  padding-inline-start: 0px;
   padding: 0;
   list-style: none;
   text-align: left;
@@ -94,12 +101,25 @@ img {
 .certifications-list {
   padding: 0;
   list-style: none;
+  text-align: center; /* Center the text */
+}
+
+.cert-item {
+  font-size: 1.3rem; /* Make the text larger */
+  font-weight: bold;
+  margin: 10px 0;
+  color: #115f9e; /* Add a color for emphasis */
+}
+
+.cert-item::before {
+  content: "• "; /* Add bullet points */
+  color: #66BFBF; /* Bullet color */
+  font-size: 1.5rem;
 }
 
 .skills-list {
-  padding-inline-start: 0px;
-  margin: auto;
   padding: 0;
+  margin: auto;
   list-style: none;
   text-align: left;
 }
@@ -141,38 +161,43 @@ img {
 }
 
 .certifications-container {
-  margin: auto;
-  margin: 100px 0;
+  margin: 20px 0; /* Reduce vertical spacing above and below cert-1.jpg */
   padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .certifications {
-  width: 50%;
+  width: 100%; /* Full width on mobile */
   margin: auto;
   line-height: 1.5;
-  padding-bottom: 50px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .skills-container {
   margin: 100px 0;
   padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .skills {
-  width: 50%;
+  width: 100%; /* Full width on mobile */
   margin: auto;
   line-height: 1.5;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .bottom-container {
   background-color: #66BFBF;
-  padding: 50px 0 20px;
   padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .btn {
@@ -188,12 +213,11 @@ img {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+  padding: 10px 20px;
   text-decoration: none;
   display: block;
   margin: 10px auto;
-  font-size: 16px;
 }
 
 .btn:hover {
@@ -210,6 +234,8 @@ img {
   margin: 0px 0 75px 0;
   padding: 20px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .copyright {
@@ -234,36 +260,32 @@ img {
   font-size: 2.5em;
 }
 
-#computers-1 {
-  width: 300px;
-  height: 300px;
-  float: left;
-  padding-top: 80px;
+#computers-1, #computers-2 {
+  width: 67%; /* Reduce size to 67% of the original */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center the images */
+  display: block; /* Ensure proper centering */
 }
 
 #work-1 {
-  width: 300px;
-  height: 300px;
+  width: 50%; /* Reduce size to 50% of the original */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center the image */
+  display: block; /* Ensure proper centering */
 }
 
 #cert-1 {
-  width: 300px;
-  height: 300px;
-  float: left;
-  margin-right: 50px;
-}
-
-#computers-2 {
-  width: 300px;
-  height: 300px;
-  float: left;
-  padding-top: 55px;
+  width: 50%; /* Make the certification image much smaller */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center the image */
+  display: block; /* Ensure proper centering */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .highlights, .work-experience, .certifications, .skills {
     padding: 10px;
+    width: 100%; /* Ensure full width */
   }
 
   .highlights-list, .skills-list {
@@ -271,14 +293,25 @@ img {
   }
 
   .btn {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px; /* Slightly smaller buttons */
   }
 
-  .footer-link1, .footer-link2 {
-    display: block;
+  h1 {
+    font-size: 2rem; /* Further reduce size for very small screens */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  #computers-1, #work-1, #cert-1, #computers-2 {
+    width: 100%; /* Images take full width */
+    height: auto; /* Maintain aspect ratio */
+    float: none; /* Remove float for better stacking */
     margin: 10px 0;
   }
 }
